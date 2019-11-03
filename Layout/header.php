@@ -20,9 +20,11 @@
                 <li><a href="index.php?action=createAccount">
                         <button type="button">Create account</button>
                     </a></li>
-                <li class="nav-item">
-                    <button type="button">Connexion</button>
-                </li>
+
+                <li><a href="index.php?action=connexion">
+                        <button type="button">Connexion</button>
+                    </a></li>
+
                 <?php
             }
             ?>

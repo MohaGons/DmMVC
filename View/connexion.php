@@ -6,17 +6,14 @@
 
         </div>
         <div class="col-md-4">
-            <h1>Inscription</h1>
+            <h1>Connexion</h1>
             <br>
             <form method="post" action="">
                 <div class="form-group">
-                    <input type="text" name="username" placeholder="Veuillez saisir un pseudo">
+                    <input type="text" name="username" placeholder="username">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password1" placeholder="Entrer un mot de passe">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password2" placeholder="Confirmer votre mot de passe">
+                    <input type="password" name="password" placeholder="password">
                 </div>
                 <button type="submit">Submit</button>
             </form>

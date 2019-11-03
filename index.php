@@ -1,18 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="blog de cigarillos prod">
+    <title>Blog Mohammad</title>
+</head>
+
+<body>
 <?php
 
-$requestedPages = '/';
+require_once('Layout/header.php');
+?>
+<?php
+if( isset($_GET['action']) ){
+    if($_GET['action'] == 'createAccount'){
+        require_once('Controller/inscriptionController.php');
 
-if (isset($_SERVER['REQUEST_URI'])) {
-    $requestedPages = $_SERVER['REQUEST_URI'];
-    $requestedPages = explode('?', $requestedPages);
+    }else if($_GET['action']== 'connexion'){
+        require_once('Controller/connexionController.php');
+
+    }/*else if($_GET['path']== 'home'){
+
+        require_once('controller/homeController.php');
+
+    }*/
+}else{
+
+    echo "error";
+
 }
-
-switch ($requestedPages[0]) {
-    case '/home':
-        include_once(__DIR__ . '/Controller/Controller.php');
-        break;
-
-    default:
-        require_once(__DIR__ . '/View/home.php');
-
-}
+?>
+</body>
+</html>
